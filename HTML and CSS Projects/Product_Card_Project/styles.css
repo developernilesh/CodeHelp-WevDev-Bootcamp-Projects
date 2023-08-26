@@ -9,7 +9,8 @@
 .container{
     width: 100%;
     min-height: 100vh;
-    background-image: linear-gradient(to top left, hsl(157, 23%, 71%),hsl(158, 36%, 60%),hsl(158, 40%, 54%));
+    /* background-image: linear-gradient(to top left, hsl(157, 23%, 71%),hsl(158, 36%, 60%),hsl(158, 40%, 54%)); */
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
     /* background-color: rgba(242, 231, 217, 0.76); */
     display: flex;
     justify-content: center;
