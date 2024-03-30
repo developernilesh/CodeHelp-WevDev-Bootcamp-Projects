@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.spinner {
+    width: 56px;
+    height: 56px;
+    border: 11.2px #686bff double;
+    border-left-style: solid;
+    border-radius: 50%;
+    animation: spinner-zp9dbg 0.75s infinite linear;
+}
+
+@keyframes spinner-zp9dbg {
+    to {
+        transform: rotate(360deg);
+    }
+}
