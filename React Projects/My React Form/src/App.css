@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background-image: linear-gradient(to right bottom, #07b9c9, #00acb0, #009e97, #00917f, #0c8367);
+}
+.main-form{
+    width: 90%;
+    max-width: 600px;
+    padding: 1.5rem 3rem;
+    margin-block: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right bottom, #002863, #00336a, #003d6f, #004774, #005177);
+    border-radius: 5px;
+}
+input,select{
+    border: none;
+    outline: none;
+    padding: 5px 8px;
+    margin-bottom: 4px;
+    font-size: 0.85rem;
+    color: rgb(255, 228, 228);
+    background-image: linear-gradient(to right, #580b40, #650a48, #720850, #7f0558, #8d0060);
+    border: 1.2px solid #fff;
+    border-radius: 5px;
+}
+option{
+    color: rgb(255, 228, 228);
+    background: #630746;
+    border: 1.2px solid #fff;
+}
+label{
+    color: rgb(218, 255, 255);
+}
+input::placeholder{
+    font-size: 0.8rem;
+    color: #ffffffc1;
+}
+.checkbox-container{
+    border:0 none;
+    margin-block: 8px;
+}
+.checkboxes{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 5px;
+    gap: 10px;
+}
+.description p{
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+input[type=checkbox]{
+    appearance: none;
+    border: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 2px;
+    background: #15c3d3;
+    position: relative;
+}
+input[type=checkbox]:checked{
+    background: #ac0076;
+}
+input[type=checkbox]:checked::before{
+    content: '✓';
+    font-weight: 700;
+    color: #fff;
+    position: absolute;
+    top: -2px;
+    left: 3px;
+}
+.radio-container>p{
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+input[type=radio]{
+    appearance: none;
+    border: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background: #15c3d3;
+    position: relative;
+}
+input[type=radio]:checked{
+    background-color: #650a48;
+}
+input[type=radio]:checked::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    border-width: 6px;
+    border-color: white;
+    border-style: double;
+    border-radius: 50%;
+}
+.radio-btns{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.radio-container{
+    border: none;
+    margin-block: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.btn{
+    border: none;
+    outline: none;
+    width: fit-content;
+    color: #ffffff;
+    background-color: #0aa831;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 2px 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.btn:hover{
+    background-color: #039708;
+}
