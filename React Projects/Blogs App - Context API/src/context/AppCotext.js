@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import { baseUrl } from "../baseUrl";
-import { useNavigate } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 export const AppContext = createContext();
 
@@ -9,7 +9,7 @@ export function AppContextProvider({children}){
     const [posts, setPosts] = useState([]);
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState('');
-    const navigate = useNavigate();
+    const [searchParams, setSearchParams] = useSearchParams();
 
     async function fetchBlogs(page = 1, tag = null, category = null) {
         setLoading(true);
@@ -43,7 +43,7 @@ export function AppContextProvider({children}){
     }
 
     function handlePageChange(page) {
-        navigate({search: `page=${page}`})
+        setSearchParams({page: `${page}`})
         setPage(page);
     }
 
@@ -52,7 +52,8 @@ export function AppContextProvider({children}){
         loading,setLoading,
         page,setPage,
         totalPages,setTotalPages,
-        handlePageChange, fetchBlogs
+        handlePageChange, fetchBlogs,
+        searchParams
     }    
 
     return <AppContext.Provider value={value}>

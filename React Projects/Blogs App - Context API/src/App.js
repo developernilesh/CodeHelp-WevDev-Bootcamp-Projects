@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { AppContext } from './context/AppCotext'
 import './App.css'
-import { Route, Routes, useLocation, useSearchParams } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import Home from './Pages/Home'
 import BlogPage from './Pages/BlogPage'
 import TagPage from './Pages/TagPage'
@@ -9,8 +9,8 @@ import CategoryPage from './Pages/CategoryPage'
 
 const App = () => {
 
-  const {fetchBlogs} = useContext(AppContext)
-  const [searchParams, setSearchParams] = useSearchParams();
+  const {fetchBlogs,searchParams} = useContext(AppContext)
+  
   const location = useLocation();
 
   useEffect(() => {
