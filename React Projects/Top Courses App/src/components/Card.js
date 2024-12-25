@@ -2,11 +2,7 @@ import React from "react";
 import {FcLike, FcLikePlaceholder} from "react-icons/fc";
 import { toast } from "react-toastify";
 
-const Card = (props) => {
-
-    let course = props.course;
-    let likedCourses = props.likedCourses;
-    let setLikedCourses = props.setLikedCourses;
+const Card = ({course,likedCourses,setLikedCourses}) => {
 
     function clickHandler() {
         if(likedCourses.includes(course.id)){
