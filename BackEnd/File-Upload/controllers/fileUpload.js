@@ -1,21 +1,19 @@
-const File = require('../models/File')
+const File = require("../models/File");
 
-exports.localFileUpload = async(req, res) => {
-    try {
-        const file = req.files.file;
-        console.log("Uploaded file : ", file);
-        
-        let path = __dirname + '/files/' + Date.now();
+exports.localFileUpload = async (req, res) => {
+  try {
+    const file = req.files.file;
+    console.log("Uploaded file : ", file);
 
-        file.mv(path, (err) => {
-            console.log(err)
-        })
+    let path = __dirname + "/files/" + Date.now();
 
-        res.json({
-            success: true,
-            message: 'Local File Uploaded Successfully'
-        })
-    } catch (error) {
-        
-    }
-}
+    file.mv(path, (err) => {
+      console.log(err);
+    });
+
+    res.json({
+      success: true,
+      message: "Local File Uploaded Successfully",
+    });
+  } catch (error) {}
+};

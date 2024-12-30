@@ -15,7 +15,7 @@ const cloudinary = require('./config/cloudinary')
 cloudinary.cloudinaryConnect()
 
 const upload = require('./routes/FileUpload')
-app.use('api/upload',upload)
+app.use('/api/upload',upload)
 
 app.listen(PORT, () => {
     console.log(`App is running at ${PORT}`);
